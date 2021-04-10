@@ -1,38 +1,47 @@
-.App {
+body {
+  background: black;
+}
+* {
+  font-family: "Avenir";
+}
+.crypto {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  width: 50%;
+  border-radius: 7px;
+  padding: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+}
+.crypto .name {
+  font-size: 15px;
+  text-indent: 10px;
+  float: left;
+}
+.crypto .price {
+  float: right;
+  font-size: 15px;
+  margin-right: 10px;
+}
+h1 {
+  color: white;
+  letter-spacing: 2px;
+  margin: 100px auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 25px;
+  height: 25px;
+  float: left;
+  line-height: 150px;
+  margin-left: 10px;
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(0%, 50%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 770px) {
+  .crypto {
+    width: 95%;
   }
 }
