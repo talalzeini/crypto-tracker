@@ -1,0 +1,15 @@
+.copyright-text {
+  text-align: center;
+  color: #ffffff;
+}
+.footer-stuff {
+  text-align: center;
+  margin: 0;
+  display: block;
+}
+.footer-stuff a {
+  color: white;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 15px;
+}

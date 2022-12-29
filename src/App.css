@@ -31,7 +31,7 @@ h1 {
   margin: 100px auto;
   text-align: center;
 }
-img {
+.table-image {
   width: 25px;
   height: 25px;
   float: left;
@@ -44,4 +44,28 @@ img {
   .crypto {
     width: 95%;
   }
+}
+.blue {
+  background: #0064c8;
+}
+.red {
+  background: #ff4b4b;
+}
+.green {
+  background: #00c864;
+}
+.orange {
+  background: #ffaf32;
+}
+.yellow {
+  background: #ffe119;
+}
+.cyan {
+  background: #4be6e6;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
 }

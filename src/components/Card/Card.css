@@ -1,0 +1,39 @@
+.card {
+  background: #ffffff;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+  width: 350px;
+  padding: 0;
+}
+.card-title {
+  margin-top: 5px;
+  margin-left: 10px;
+  padding: 0;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  opacity: 0.2;
+}
+.card-text {
+  text-align: center;
+  font-size: 35px;
+}
+.card-deck {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+.card-image {
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+  z-index: -1;
+  width: 25%;
+  background-position: center;
+}
+.dolar-sign {
+  opacity: 0.25;
+}

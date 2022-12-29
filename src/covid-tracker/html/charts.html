@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle"></title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  </head>
+  <body onload="loadScreen()">
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+
+    <main class="main-content hidden">
+      <div class="header">
+        <a class="charts-link" href="../index.html"> Home</a>
+      </div>
+
+      <div style="text-align: center; color: #ffffff" class="mb-5">
+        <h1 id="countryID"></h1>
+        <h5 id="population"></h5>
+      </div>
+      <div class="chartDiv" style="margin: 0 auto; display: block">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <footer class="mt-5">
+        <div class="d-{block} m-auto text-center">
+          <h5 style="color: #ffffff">COVID-19 Tracker</h5>
+          <div class="footer-stuff">
+            <a href="../index.html">Home</a>
+            <a href="https://talalzeini.com/">Portfolio</a>
+            <a href="https://telzeini.web.app">Tree</a>
+          </div>
+          <p class="text-light">Copyright © 2022 Talal El Zeini</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../js/charts.js"></script>
+  <script src="../js/spinner.js"></script>
+</html>

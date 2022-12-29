@@ -1,0 +1,289 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+html,
+body {
+  background: #000000;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  font-family: "Avenir";
+  -webkit-touch-callout: none;
+}
+* {
+  font-family: "Avenir";
+  outline: none;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*:not(.slick-track):not(.slick-list) {
+  transition: 0.4s;
+}
+.hide {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.inactive{
+  display: none;
+}
+
+/* color styles */
+.blue {
+  background: #0064c8;
+}
+.red {
+  background: #ff4b4b;
+}
+.green {
+  background: #00c864;
+}
+.orange {
+  background: #ffaf32;
+}
+.yellow {
+  background: #ffe119;
+}
+.cyan {
+  background: #4be6e6;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
+}
+.gr {
+  color: #00c864;
+}
+.footer-stuff a {
+  color: white;
+  display: block;
+  font-size: 15px;
+}
+/* table stats styles */
+.outter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+.content {
+  position: relative;
+  height: calc(100% - 3em);
+}
+table {
+  position: relative;
+  margin: 10px;
+  border: 1px solid #ffffff;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-right: none;
+  border-left: 1px solid #ffffff;
+  text-align: center;
+}
+.sub-table th {
+  padding: 10px;
+}
+td {
+  border: 1px solid #ffffff;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #ffffff;
+}
+@media screen and (max-width: 950px) {
+  .sub-table {
+    font-size: 10px;
+  }
+  td {
+    font-size: 12px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .sub-table {
+    font-size: 8px;
+  }
+  td {
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .sub-table {
+    font-size: 8px;
+  }
+  td {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .sub-table {
+    font-size: 8px;
+  }
+  td {
+    font-size: 6px;
+  }
+}
+/* spinner */
+
+.spinner-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.spinner:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, white 0%, black 100%);
+  animation: spin 1s infinite linear;
+}
+.spinner:after {
+  width: 80%;
+  height: 80%;
+  background-color: #000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* spinner ends here */
+.card-text {
+  font-size: 30px;
+}
+
+.chartDiv {
+  width: 75%;
+}
+
+@media screen and (max-width: 750px) {
+  .chartDiv {
+    width: 100%;
+  }
+}
+.info {
+  color: #ffffff;
+  transition: 0.5s;
+  cursor: pointer;
+  line-height: 150%;
+}
+.info:hover {
+  color: #eeeeee;
+  transition: 0.5s;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #000000;
+  /* height: 3.75em; */
+  width: 100%;
+  font-size: 15px;
+  color: #000000;
+  text-align: center;
+  align-items: center;
+}
+
+.charts-link {
+  padding: 10px;
+}
+.last-refresh {
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  animation: colorchange 100s linear 1s infinite;
+  -webkit-animation: colorchange 100s linear 0s infinite alternate;
+}
+@keyframes colorchange {
+  0% {
+    background: red;
+    color: #ffffff;
+  }
+  20% {
+    background: orange;
+    color: #ffffff;
+  }
+  40% {
+    background: yellow;
+    color: #000000;
+  }
+  60% {
+    background: yellowgreen;
+    color: #000000;
+  }
+  75% {
+    background: green;
+    color: #ffffff;
+  }
+  90% {
+    background: cyan;
+    color: #ffffff;
+  }
+  100% {
+    background: #2f2f2f;
+    color: #ffffff;
+  }
+}
+.sortButton {
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+.sortButton:hover {
+  outline: none;
+  border: none;
+  text-decoration: underline;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="./favicon.png" type="image/ico" />
+    <link
+      rel="stylesheet"
+      href="style.css"/>
+  </head>
+  <body id="body" onload="loadScreen()">
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+      <br />
+    </div>
+
+    <main class="main-content hidden" id="main-content-home">
+        <div class="header">
+          <div id="lastRefresh" class="last-refresh"></div>
+          <a class="charts-link"
+            href="./html/charts.html"
+            window.href.onclick="goToCharts()"
+            >Charts</a
+          >
+        </div>
+      <div
+        style="text-align: center; color: #ffffff; margin-top: 50px"
+        class="mb-5"
+      >
+        <h1>COVID-19 Tracker</h1>
+        <h2>WEAR A MASK</h2>
+      </div>
+
+      <div
+        class="card-deck w-75 m-auto d-{block}"
+        style="text-align: center; color: #ffffff"
+      >
+        <div class="card mb-3 blue" style="border-radius: 20px">
+          <div class="card-body">
+            <h5 class="card-title">CASES</h5>
+            <p id="totalCases" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+
+        <div class="card mb-3 red" style="border-radius: 20px">
+          <div class="card-body">
+            <h5 class="card-title">DEATHS</h5>
+            <p id="totalDeaths" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+
+        <div class="card mb-3 green" style="border-radius: 20px">
+          <div class="card-body">
+            <h5 class="card-title">RECOVERED</h5>
+            <p id="totalRecovered" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-deck w-75 m-auto d-{block}"
+        style="text-align: center; color: #ffffff"
+      >
+        <div class="card orange" style="border-radius: 20px; cursor: pointer">
+          <div class="card-body">
+            <h5 class="card-title">CRITICAL</h5>
+            <p id="totalCritical" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+        <div class="card yellow" style="border-radius: 20px">
+          <div class="card-body">
+            <h5 class="card-title">ACTIVE</h5>
+            <p id="totalActive" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+        <div class="card cyan" style="border-radius: 20px">
+          <div class="card-body">
+            <h5 class="card-title">TESTS</h5>
+            <p id="totalTests" class="card-text font-weight-bold"></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="outter">
+          <div
+            class="content"
+            style="text-align: center; display: block; margin: 0 auto"
+          >
+            <table id="table" class="tableClass">
+              
+            </table>
+          </div>
+        </div>
+      </div>
+      <footer class="mt-5">
+        <div class="d-{block} m-auto text-center">
+          <h5 style="color: #ffffff">COVID-19 Tracker</h5>
+          <div class="footer-stuff">
+            <a href="./html/charts.html">Charts</a>
+            <a href="https://talalzeini.com/">Portfolio</a>
+            <a href="https://telzeini.web.app">Tree</a>
+          </div>
+          <p class="text-light">Copyright © 2022 Talal El Zeini</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/spinner.js"></script>
+  <script src="main.js"></script>
+  <script>
+    function goToCharts() {
+      localStorage.clear();
+    }
+  </script>
+</html>
