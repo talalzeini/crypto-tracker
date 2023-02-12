@@ -80,6 +80,7 @@ body {
   position: relative;
   height: calc(100% - 3em);
 }
+
 table {
   position: relative;
   margin: 10px;

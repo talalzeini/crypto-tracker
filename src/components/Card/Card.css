@@ -1,5 +1,5 @@
 .card {
-  background: #ffffff;
+  background-color: rgb(25, 25, 75);
   display: inline-block;
   margin: 10px;
   border-radius: 10px;
@@ -13,6 +13,7 @@
   text-align: left;
   font-weight: bold;
   font-size: 20px;
+  color: white;
   text-transform: uppercase;
   opacity: 0.2;
 }
@@ -31,7 +32,7 @@
   margin: 10px auto;
   display: block;
   z-index: -1;
-  width: 25%;
+  width: 20%;
   background-position: center;
 }
 .dolar-sign {

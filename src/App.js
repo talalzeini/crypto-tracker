@@ -18,9 +18,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="test">Crypto Tracker</h1>
+      <h1 className="test">Fun Crypto Tracking Terminal</h1>
+      <h4 className="test">
+        Track popular coins, and analyze price changes with ease
+      </h4>
 
-      <div className="card-deck">
+      {/* <div className="card-deck">
         {cryptoData.slice(0, 3).map((data) => {
           return (
             <Card
@@ -30,8 +33,8 @@ function App() {
             />
           );
         })}
-      </div>
-
+      </div> */}
+      {/* 
       <div className="card-deck">
         {cryptoData.slice(3, 6).map((data) => {
           return (
@@ -42,17 +45,36 @@ function App() {
             />
           );
         })}
-      </div>
+      </div> */}
+      <table id="table" class="tableClass">
+        <tr>
+          <th style={{ margin: "10px" }}></th>
+          <th style={{ margin: "10px" }}></th>
+          <th style={{ margin: "10px" }}>Name</th>
+          <th style={{ margin: "10px" }}>Price</th>
+          <th style={{ margin: "10px" }}>Change (24H) </th>
+          <th style={{ padding: "20px", margin: "10px" }}>Market Cap</th>
+        </tr>
 
-      <div id="data">
+        {/* <div id="data"> */}
         {cryptoData.map((data) => (
-          <button className="crypto" key={uuid()}>
-            <img className="table-image" src={data.image} alt={uuid()} />
-            <p className="name">{data.name}</p>
-            <p className="price">$ {data.current_price} USD</p>
-          </button>
+          <tr>
+            <th>{data.market_cap_rank}</th>
+            <th>
+              <img className="table-image" src={data.image} alt={uuid()} />
+            </th>
+            <th>{data.name}</th>
+            <th>${data.current_price}</th>
+            <th style={{ padding: "20px" }}>
+              {data.price_change_percentage_24h}%
+            </th>
+            <th style={{ padding: "20px", fontSize: "12px " }}>
+              ${data.market_cap}
+            </th>
+          </tr>
         ))}
-      </div>
+        {/* </div> */}
+      </table>
 
       <Footer />
     </div>
