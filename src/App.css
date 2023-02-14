@@ -52,6 +52,9 @@ h4 {
   .optional {
     display: none;
   }
+  table {
+    width: 100%;
+  }
 }
 .blue {
   background: #0064c8;
@@ -79,7 +82,6 @@ h4 {
 }
 
 table {
-  width: 100%;
   box-sizing: border-box;
   position: relative;
   left: 50%;

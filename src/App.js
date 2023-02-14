@@ -36,7 +36,7 @@ function App() {
       <table id="table" className="tableClass">
         <tr>
           <th style={{ margin: "10px" }}></th>
-          <th style={{ margin: "10px" }}></th>
+          <th style={{ margin: "10px" }} class="optional"></th>
           <th style={{ margin: "10px" }}>Name</th>
           <th style={{ margin: "10px" }}>Price</th>
           <th style={{ margin: "10px" }}>Change (24H) </th>
@@ -45,23 +45,22 @@ function App() {
           </th>
         </tr>
 
-        {/* <div id="data"> */}
         {cryptoData.map((data) => (
           <tr>
             <th>{data.market_cap_rank}</th>
-            <th>
+            <th class="optional">
               <img className="table-image" src={data.image} alt={uuid()} />
             </th>
             <th>{data.name}</th>
             <th>${data.current_price}</th>
 
             {data.price_change_percentage_24h < 0 && (
-              <th style={{ color: "red", border: "none" }}>
+              <th style={{ color: "red" }}>
                 {data.price_change_percentage_24h}%
               </th>
             )}
             {data.price_change_percentage_24h > 0 && (
-              <th style={{ color: "green", border: "none" }}>
+              <th style={{ color: "green" }}>
                 {data.price_change_percentage_24h}%
               </th>
             )}
@@ -71,7 +70,6 @@ function App() {
             </th>
           </tr>
         ))}
-        {/* </div> */}
       </table>
 
       <Footer />
